@@ -1,1 +1,45 @@
-// TODO
+.banner {
+  width: 100%;
+  height: 20rem;
+
+  object-fit: cover;
+}
+
+.container {
+  header {
+    margin: 3rem 0;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--heading);
+    }
+
+    div {
+      font-size: 0.875rem;
+      display: flex;
+      gap: 1.5rem;
+
+      span {
+        color: var(--info);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  article {
+    margin: 3rem 0;
+
+    h2 {
+      font-size: 2.25rem;
+      margin: 2.5rem 0;
+      color: var(--heading);
+    }
+    p {
+      font-size: 1.125rem;
+      margin: 1.5rem 0;
+    }
+  }
+}
