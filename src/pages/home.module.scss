@@ -1,1 +1,80 @@
-// TODO
+.content {
+  margin: 4rem 0;
+
+  a {
+    display: block;
+    & + a {
+      margin-top: 3rem;
+    }
+
+    &:hover {
+      h1 {
+        color: var(--highlight);
+      }
+    }
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+  }
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  div {
+    font-size: 0.875rem;
+    display: flex;
+    gap: 1.5rem;
+
+    span {
+      color: var(--info);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.morePostsButton {
+  margin: 0 0 4rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--highlight);
+  background-color: transparent;
+  border: 0;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+.loading {
+  margin: 0 0 4rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--highlight);
+
+  transition: filter 0.2s;
+  animation: loadingSpinner 3s cubic-bezier(0.175, 0.885, 0.32, 1.75) infinite;
+
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+@keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
