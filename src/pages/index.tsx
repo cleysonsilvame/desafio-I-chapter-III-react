@@ -3,7 +3,9 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FiCalendar, FiLoader, FiUser } from 'react-icons/fi';
+import { format } from 'date-fns';
 
+import { ptBR } from 'date-fns/locale';
 import Header from '../components/Header';
 
 import { getPrismicClient } from '../services/prismic';
@@ -35,16 +37,6 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
   const [posts, setPosts] = useState(results);
   const [nextPage, setNextPage] = useState<string | null>(next_page);
   const [loading, setLoading] = useState(false);
-
-  function formatDate(date: string): string {
-    return new Date(date)
-      .toLocaleDateString('pt-BR', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-      })
-      .replace(/(de|\.)/g, '');
-  }
 
   async function handleNextPage(): Promise<void> {
     setLoading(true);
@@ -83,7 +75,14 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
                 <p>{post.data.subtitle}</p>
                 <div>
                   <span>
-                    <FiCalendar /> {formatDate(post.first_publication_date)}
+                    <FiCalendar />{' '}
+                    {format(
+                      new Date(post.first_publication_date),
+                      'dd MMM yyyy',
+                      {
+                        locale: ptBR,
+                      }
+                    )}
                   </span>
                   <span>
                     <FiUser /> {post.data.author}
