@@ -1,0 +1,41 @@
+{
+  "id": "580d107d-27ff-4287-9d9e-c678d4b98a1d",
+  "uid": "provident-et-quia",
+  "type": "posts",
+  "data": {
+    "title": "transform dynamic interfaces",
+    "subtitle": "target sexy communities",
+    "author": "scale B2C mindshare",
+    "banner": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+    },
+    "content": [
+      {
+        "heading": "drive extensible experiences",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Non in anim aliqua.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "heading": "grow cross-platform applications",
+        "body": [
+          {
+            "type": "paragraph",
+            "text": "Duis velit dolor sint non dolore ut ullamco mollit. Nisi magna voluptate mollit aliqua duis enim elit esse nisi eiusmod occaecat labore. Esse irure velit incididunt aute officia laborum minim ullamco.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}
